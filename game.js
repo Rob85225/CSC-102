@@ -1,29 +1,33 @@
-// Function to simulate the Dice Duel game
-function playGame() {
-    // Generate a random number between 1 and 6 for the player's dice
-    const playerRoll = getRandomNumber(1, 6);
-    // Generate a random number between 1 and 6 for the house's dice
-    const houseRoll = getRandomNumber(1, 6);
+// Function to simulate the Craps game
+function playCraps() {
+    // Generate two random numbers between 1 and 6 (inclusive) for the dice
+    const die1 = rollDie();
+    const die2 = rollDie();
 
-    // Calculate the sum of the dice rolls
-    const playerSum = playerRoll + houseRoll;
+    // Calculate the sum of the two dice
+    const sum = die1 + die2;
 
-    // Determine the result based on the sum of the dice rolls
-    let resultMessage = ""; // Placeholder for the result message
-    if (playerSum > 7) {
-        resultMessage = `🎉 You rolled a ${playerRoll} and ${houseRoll} (Total: ${playerSum}). You WIN!`;
-    } else if (playerSum === 7) {
-        resultMessage = `🤝 You rolled a ${playerRoll} and ${houseRoll} (Total: ${playerSum}). It's a TIE!`;
-    } else {
-        resultMessage = `😢 You rolled a ${playerRoll} and ${houseRoll} (Total: ${playerSum}). You LOSE.`;
+    // Variable to hold the game result message
+    let resultMessage = "You Rocked It!";
+
+    // Check for Craps (lose condition)
+    if (sum === 7 || sum === 11) {
+        resultMessage = `🎲 You rolled ${die1} and ${die2} (Total: ${sum}). CRAPS – You lose!`;
+    }
+    // Check if both dice are equal and even (win condition)
+    else if (die1 === die2 && die1 % 2 === 0) {
+        resultMessage = `🎲 You rolled ${die1} and ${die2}. Double evens! You WIN!`;
+    }
+    // Any other outcome results in a push
+    else {
+        resultMessage = `🎲 You rolled ${die1} and ${die2} (Total: ${sum}). It's a PUSH!`;
     }
 
-    // Display the result message in the designated HTML element
+    // Output the result to the webpage
     document.getElementById("result").innerHTML = resultMessage;
 }
 
-// Utility function to generate a random number within a given range
-function getRandomNumber(min, max) {
-    // Use Math.random() to generate a number between min and max (inclusive)
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// Utility function to generate a random number between 1 and 6
+function rollDie() {
+    // Math.random generates a number between 0 and 1, which is scaled to 1-6
+    return Math.floor(Math.random() * 6) + 1}
