@@ -1,0 +1,32 @@
+/* main.css - Created by Robert Jimenez */
+
+/* BODY STYLING */
+body {
+    background-color: blue;   /* choose any color you like */
+    color: white;             /* text color */
+}
+
+/* NAVIGATION STYLING */
+nav {
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+/* FOOTER STYLING */
+footer {
+    text-align: center;
+    margin-right: 200px;
+}
+
+/* MEME IMAGE STYLING */
+#memeImage {
+    margin-right: 200px;
+}
+
+/* HEADER STYLING */
+header {
+    text-align: center;
+}
