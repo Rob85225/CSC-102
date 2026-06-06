@@ -1,26 +1,43 @@
 <!-- Name: Robert Jimenez -->
-<!-- File: index.html -->
-<!-- Purpose: Main page for Assignment - HTML Basics -->
+<!-- File: game.html -->
+<!-- Updated: 06/05/2026 -->
+<!-- Purpose: HTML page for Assignment 2.3 - JavaScript Functions -->
 
-<!DOCTYPE html> <!-- HTML5 document type declaration -->
-<html> <!-- Open HTML tag -->
+<!DOCTYPE html>
+<html lang="en">
 
-<head> <!-- Open head section -->
-    <!-- Title of the webpage shown in browser tab -->
-    <title>My First Webpage - Index</title>
-</head> <!-- Close head section -->
+<head>
+    <meta charset="UTF-8">
+    <title>Quark's High-Low Casino</title>
 
-<body> <!-- Open body section -->
+    <!-- Linking the external JavaScript file -->
+    <script src="code.js"></script>
+</head>
 
-    <!-- Main header for the page -->
-    <h1>Welcome to My Index Page</h1>
+<body>
 
-    <!-- Paragraph section containing the meme image -->
-    <p>
-        <!-- Fun school-appropriate meme image -->
-        <img id="memeImage" src="back-to-school-meme-kitten.jpg" alt="Funny Meme">
-    </p>
+    <!-- PAGE HEADER -->
+    <header>
+        <h1>Welcome to Quark's High‑Low Casino!</h1>
+        <h3>Try your luck, human…</h3>
+    </header>
 
-</body> <!-- Close body section -->
+    <!-- FORM FOR USER INPUT (required by assignment) -->
+    <!-- The form calls playGame() when submitted -->
+    <form onsubmit="playGame(); return false;">
+        <!-- Label for the input -->
+        <label for="playerNumber">Enter a number (1–10):</label><br>
 
-</html> <!-- Close HTML tag -->
+        <!-- User input field -->
+        <input type="number" id="playerNumber" min="1" max="10" required><br><br>
+
+        <!-- Button to play the game -->
+        <input type="submit" value="Play Game">
+    </form>
+
+    <!-- AREA WHERE GAME RESULTS WILL APPEAR -->
+    <p id="gameOutput"></p>
+
+</body>
+</html>
+
