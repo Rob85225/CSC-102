@@ -12,15 +12,15 @@ function playCraps() {
 
     // Check for Craps (lose condition)
     if (sum === 7 || sum === 11) {
-        resultMessage = `🎲 You rolled ${die1} and ${die2} (Total: ${sum}). CRAPS – You lose!`;
+        resultMessage = ` You rolled ${die1} and ${die2} (Total: ${sum}). CRAPS – You lose!`;
     }
     // Check if both dice are equal and even (win condition)
     else if (die1 === die2 && die1 % 2 === 0) {
-        resultMessage = `🎲 You rolled ${die1} and ${die2}. Double evens! You WIN!`;
+        resultMessage = ` You rolled ${die1} and ${die2}. Double evens! You WIN!`;
     }
     // Any other outcome results in a push
     else {
-        resultMessage = `🎲 You rolled ${die1} and ${die2} (Total: ${sum}). It's a PUSH!`;
+        resultMessage = ` You rolled ${die1} and ${die2} (Total: ${sum}). It's a PUSH!`;
     }
 
     // Output the result to the webpage
