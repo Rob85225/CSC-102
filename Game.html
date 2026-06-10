@@ -1,43 +1,56 @@
-<!-- Name: Robert Jimenez -->
-<!-- File: game.html -->
-<!-- Updated: 06/05/2026 -->
-<!-- Purpose: HTML page for Assignment 2.3 - JavaScript Functions -->
+// Name: Robert Jimenez
+// File: code.js
+// Updated: 06/05/2026
+// Purpose: JavaScript functions for Assignment 2.3 - High-Low Casino Game
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Quark's High-Low Casino</title>
+// -------------------------------------------------------------
+// FUNCTION 1: playGame()
+// This function runs when the user clicks the "Play Game" button.
+// It reads the player's number, generates a random number,
+// compares them, and outputs the result using innerHTML.
+// -------------------------------------------------------------
+function playGame() {
 
-    <!-- Linking the external JavaScript file -->
-    <script src="code.js"></script>
-</head>
+    // Get the player's number from the form input
+    let playerNum = document.getElementById("playerNumber").value;
 
-<body>
+    // Convert the input to a number (important!)
+    playerNum = Number(playerNum);
 
-    <!-- PAGE HEADER -->
-    <header>
-        <h1>Welcome to Quark's High‑Low Casino!</h1>
-        <h3>Try your luck, human…</h3>
-    </header>
+    // Generate a random number between 1 and 10
+    let casinoNum = Math.floor(Math.random() * 10) + 1;
 
-    <!-- FORM FOR USER INPUT (required by assignment) -->
-    <!-- The form calls playGame() when submitted -->
-    <form onsubmit="playGame(); return false;">
-        <!-- Label for the input -->
-        <label for="playerNumber">Enter a number (1–10):</label><br>
+    // Call the second function to compare the numbers
+    let resultMessage = compareNumbers(playerNum, casinoNum);
 
-        <!-- User input field -->
-        <input type="number" id="playerNumber" min="1" max="10" required><br><br>
+    // Output the results to the webpage using innerHTML
+    document.getElementById("gameOutput").innerHTML =
+        "You chose: " + playerNum + "<br>" +
+        "Quark chose: " + casinoNum + "<br><br>" +
+        resultMessage;
+}
 
-        <!-- Button to play the game -->
-        <input type="submit" value="Play Game">
-    </form>
 
-    <!-- AREA WHERE GAME RESULTS WILL APPEAR -->
-    <p id="gameOutput"></p>
+// -------------------------------------------------------------
+// FUNCTION 2: compareNumbers(player, casino)
+// This function accepts two parameters and returns a result string.
+// It compares the player's number to the casino's number.
+// -------------------------------------------------------------
+function compareNumbers(player, casino) {
 
-</body>
-</html>
+    // If player's number is higher → win
+    if (player > casino) {
+        return " You WIN! Quark is not pleased…";
+    }
 
+    // If player's number is lower → lose
+    else if (player < casino) {
+        return " You LOSE! Quark takes your latinum.";
+    }
+
+    // If equal → push
+    else {
+        return " It's a PUSH! Nobody wins.";
+    }
+}
