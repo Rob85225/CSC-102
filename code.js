@@ -39,18 +39,21 @@ function playGame() {
 // -------------------------------------------------------------
 function compareNumbers(player, casino) {
 
-    // If player's number is higher → win
-    if (player > casino) {
+    // ❌ LOGIC ERROR INSERTED ON PURPOSE:
+    // This condition is reversed. It should be (player > casino).
+    if (player < casino) {
         return " You WIN! Quark is not pleased…";
     }
 
-    // If player's number is lower → lose
-    else if (player < casino) {
+    // ❌ Also reversed on purpose:
+    // This should be (player < casino), but now it's flipped.
+    else if (player > casino) {
         return " You LOSE! Quark takes your latinum.";
     }
 
-    // If equal → push
+    // If equal → push (this part is still correct)
     else {
         return " It's a PUSH! Nobody wins.";
     }
 }
+
