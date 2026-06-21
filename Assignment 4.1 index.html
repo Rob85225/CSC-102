@@ -1,0 +1,70 @@
+<!--
+    Name: Robert Jimenez
+    Assignment 4.1 – Event Driven Programming
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Page title -->
+    <title>Week 4 Event Driven Programming</title>
+
+    <!-- Creative styling -->
+    <style>
+        /* Set a fun background color */
+        body {
+            background-color: #d9e8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        /* Style the buttons */
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #startButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #stopButton {
+            background-color: #d9534f;
+            color: white;
+        }
+
+        /* Style the meme image */
+        #memeImage {
+            width: 250px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page header -->
+    <h1>Move the Meme!</h1>
+
+    <!-- Start button (calls JS function) -->
+    <!-- Disables itself and enables Stop button -->
+    <button id="startButton" onClick="startMovement()">Start</button>
+
+    <!-- Stop button (calls JS function) -->
+    <!-- Disables itself and enables Start button -->
+    <button id="stopButton" onClick="stopMovement()" disabled>Stop</button>
+
+    <!-- Meme image -->
+    <img id="memeImage" src="YOUR-MEME-URL-HERE">
+
+    <!-- Link to external JS file -->
+    <script src="code.js"></script>
+
+</body>
+</html>
