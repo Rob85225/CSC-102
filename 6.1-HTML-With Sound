@@ -64,7 +64,7 @@
     <!-- Page header -->
     <h1>Palindrome Checker</h1>
 
-    <!-- 🔊 Background sound (auto-play + loop) -->
+    <!-- Background sound (auto-play + loop) -->
     <!-- Comment: This plays the US Space Station background audio -->
     <audio id="bgSound" src="https://github.com/Rob85225/CSC-102/blob/main/us-lab-background.mp3" autoplay loop></audio>
 
@@ -98,7 +98,7 @@
         <!-- Button to stop loop -->
         <button id="stopButton" style="display:none;" onclick="stopLoop()">Stop</button>
 
-        <!-- 🔊 Button to toggle sound -->
+        <!-- Button to toggle sound -->
         <!-- Comment: This button lets the user pause/play the background audio -->
         <button id="soundToggle">Toggle Sound</button>
 
