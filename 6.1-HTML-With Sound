@@ -66,7 +66,7 @@
 
     <!-- Background sound (auto-play + loop) -->
     <!-- Comment: This plays the US Space Station background audio -->
-    <audio id="bgSound" src="https://github.com/Rob85225/CSC-102/blob/main/us-lab-background.mp3" autoplay loop></audio>
+   <audio id="bgSound" src="us-lab-background.mp3" autoplay loop></audio>
 
     <!-- Form container -->
     <div id="formBox">
