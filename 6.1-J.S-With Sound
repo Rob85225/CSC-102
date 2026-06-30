@@ -1,0 +1,100 @@
+// -----------------------------------------------------
+// Global variable to control the loop (required by assignment)
+// -----------------------------------------------------
+let keepGoing = true;
+
+// -----------------------------------------------------
+// Function: checkPalindrome()
+// Purpose: Check if the user's input is a palindrome
+// -----------------------------------------------------
+function checkPalindrome() {
+
+    // -----------------------------------------------------
+    // Get the user's input from the text box
+    // -----------------------------------------------------
+    let text = document.getElementById("userInput").value;
+
+    // -----------------------------------------------------
+    // Remove spaces and convert to lowercase for comparison
+    // -----------------------------------------------------
+    let cleaned = text.replace(/\s+/g, "").toLowerCase();
+
+    // -----------------------------------------------------
+    // Reverse the cleaned string
+    // -----------------------------------------------------
+    let reversed = cleaned.split("").reverse().join("");
+
+    // -----------------------------------------------------
+    // Compare cleaned string to reversed string
+    // -----------------------------------------------------
+    if (cleaned === reversed) {
+
+        // -----------------------------------------------------
+        // Display palindrome message
+        // -----------------------------------------------------
+        document.getElementById("result").innerHTML =
+            `"${text}" IS a palindrome!`;
+
+    } else {
+
+        // -----------------------------------------------------
+        // Display NOT palindrome message
+        // -----------------------------------------------------
+        document.getElementById("result").innerHTML =
+            `"${text}" is NOT a palindrome.`;
+    }
+
+    // -----------------------------------------------------
+    // Ask user if they want to continue checking words
+    // -----------------------------------------------------
+    document.getElementById("continueMessage").innerHTML =
+        "Would you like to enter another word?";
+
+    // -----------------------------------------------------
+    // Show continue and stop buttons
+    // -----------------------------------------------------
+    document.getElementById("continueButton").style.display = "inline-block";
+    document.getElementById("stopButton").style.display = "inline-block";
+}
+
+// -----------------------------------------------------
+// Function: continueLoop()
+// Purpose: Reset the form and allow another palindrome check
+// -----------------------------------------------------
+function continueLoop() {
+
+    // -----------------------------------------------------
+    // Clear previous result text
+    // -----------------------------------------------------
+    document.getElementById("result").innerHTML = "";
+
+    // -----------------------------------------------------
+    // Clear the continue message
+    // -----------------------------------------------------
+    document.getElementById("continueMessage").innerHTML = "";
+
+    // -----------------------------------------------------
+    // Hide the continue and stop buttons
+    // -----------------------------------------------------
+    document.getElementById("continueButton").style.display = "none";
+    document.getElementById("stopButton").style.display = "none";
+
+    // -----------------------------------------------------
+    // Clear the input box for the next word
+    // -----------------------------------------------------
+    document.getElementById("userInput").value = "";
+}
+
+// -----------------------------------------------------
+// Function: stopLoop()
+// Purpose: End the loop and display a goodbye message
+// -----------------------------------------------------
+function stopLoop() {
+
+    // -----------------------------------------------------
+    // Display exit message
+    // -----------------------------------------------------
+    document.getElementById("result").innerHTML =
+        "Thank you for using the Palindrome Checker!";
+
+    // ------------------------------------------------
