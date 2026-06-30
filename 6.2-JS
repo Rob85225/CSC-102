@@ -40,19 +40,13 @@ class WordInfo {
 // -----------------------------------------------------
 function checkPalindrome() {
 
-    // -----------------------------------------------------
-    // Get the user's input from the text box
-    // -----------------------------------------------------
+    // Get the user's input
     let text = document.getElementById("userInput").value;
 
-    // -----------------------------------------------------
     // Create a WordInfo object using the class above
-    // -----------------------------------------------------
     let word = new WordInfo(text);
 
-    // -----------------------------------------------------
     // Use the class method to check palindrome
-    // -----------------------------------------------------
     if (word.isPalindrome()) {
 
         // Display palindrome message
@@ -66,15 +60,11 @@ function checkPalindrome() {
             `"${text}" is NOT a palindrome.`;
     }
 
-    // -----------------------------------------------------
-    // Ask user if they want to continue checking words
-    // -----------------------------------------------------
+    // Ask user if they want to continue
     document.getElementById("continueMessage").innerHTML =
         "Would you like to enter another word?";
 
-    // -----------------------------------------------------
     // Show continue and stop buttons
-    // -----------------------------------------------------
     document.getElementById("continueButton").style.display = "inline-block";
     document.getElementById("stopButton").style.display = "inline-block";
 }
@@ -95,4 +85,24 @@ function continueLoop() {
     document.getElementById("continueButton").style.display = "none";
     document.getElementById("stopButton").style.display = "none";
 
-    // Clear the input box for
+    // Clear the input box
+    document.getElementById("userInput").value = "";
+}
+
+// -----------------------------------------------------
+// Function: stopLoop()
+// Purpose: End the loop and display a goodbye message
+// -----------------------------------------------------
+function stopLoop() {
+
+    // Display exit message
+    document.getElementById("result").innerHTML =
+        "Thank you for using the Palindrome Checker!";
+
+    // Hide continue and stop buttons
+    document.getElementById("continueButton").style.display = "none";
+    document.getElementById("stopButton").style.display = "none";
+
+    // Clear the continue message
+    document.getElementById("continueMessage").innerHTML = "";
+}
