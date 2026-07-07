@@ -1,102 +1,40 @@
-<!--
-    Name: Robert Jimenez
-    Assignment 5.1 – Palindrome Checker
--->
+<!-- Name: Robert Jimenez -->
+<!-- File: palindrome.html -->
+<!-- Purpose: Palindrome Checker for Final Project -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <!-- Page title -->
+    <meta charset="UTF-8">
     <title>Palindrome Checker</title>
-
-    <!-- Creative styling -->
-    <style>
-        /* Set background color */
-        body {
-            background-color: #f0e6ff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 30px;
-        }
-
-        /* Style the form box */
-        #formBox {
-            background-color: white;
-            width: 50%;
-            margin: auto;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 10px gray;
-        }
-
-        /* Style the input box */
-        input {
-            padding: 10px;
-            width: 60%;
-            font-size: 18px;
-            border-radius: 8px;
-            border: 1px solid #888;
-        }
-
-        /* Style the submit button */
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            margin-top: 15px;
-            border-radius: 8px;
-            border: none;
-            background-color: #6a0dad;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Style the result text */
-        #result {
-            margin-top: 20px;
-            font-size: 22px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-    <!-- Page header -->
+    <a href="Final Project-Index.html">Back to Landing Page</a>
+
     <h1>Palindrome Checker</h1>
 
-    <!-- Form container -->
     <div id="formBox">
 
-        <!-- Form for user input -->
-        <!-- MUST use form with submit -->
         <form onsubmit="checkPalindrome(); return false;">
-
-            <!-- Label for input -->
             <p>Enter a word or phrase:</p>
 
-            <!-- Text input -->
             <input type="text" id="userInput" required>
 
-            <!-- Submit button -->
             <button type="submit">Check</button>
-
         </form>
 
-        <!-- Area where results will appear -->
         <p id="result"></p>
-
-        <!-- Area where loop question appears -->
         <p id="continueMessage"></p>
 
-        <!-- Button to continue loop -->
         <button id="continueButton" style="display:none;" onclick="continueLoop()">Enter Another Word</button>
-
-        <!-- Button to stop loop -->
         <button id="stopButton" style="display:none;" onclick="stopLoop()">Stop</button>
 
     </div>
 
-    <!-- Link to external JS file -->
     <script src="palindrome.js"></script>
 
 </body>
