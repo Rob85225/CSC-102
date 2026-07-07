@@ -1,33 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
+<!-- Name: Robert Jimenez -->
+<!-- File: table.html -->
+<!-- Purpose: Table Page for Final Project -->
 
-h1 {
-    text-align: center;
-    margin-bottom: 25px;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-table {
-    width: 70%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+<head>
+    <meta charset="UTF-8">
+    <title>My Data Table</title>
+    <link rel="stylesheet" href="main.css">
+</head>
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
+<body>
 
-th {
-    background-color: #333;
-    color: white;
-}
+    <a href="Final Project-Index.html">Back to Landing Page</a>
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+    <h1>Monthly Budget Overview</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Monthly Cost</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Rent</td>
+                <td>$1,450</td>
+                <td>Paid</td>
+            </tr>
+
+            <tr>
+                <td>Electric</td>
+                <td>$120</td>
+                <td>Due</td>
+            </tr>
+
+            <tr>
+                <td>Internet</td>
+                <td>$75</td>
+                <td>Paid</td>
+            </tr>
+
+            <tr>
+                <td>Groceries</td>
+                <td>$400</td>
+                <td>In Progress</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
