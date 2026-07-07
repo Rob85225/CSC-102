@@ -1,6 +1,8 @@
 /* main.css - Created by Robert Jimenez */
 
-/* BODY STYLING */
+/* ============================
+   GLOBAL BODY STYLING
+   ============================ */
 body {
     background-color: #f0e6ff;
     font-family: Arial, sans-serif;
@@ -8,6 +10,9 @@ body {
     padding-top: 30px;
 }
 
+/* ============================
+   SHARED FORM BOX (Palindrome, Game)
+   ============================ */
 #formBox {
     background-color: white;
     width: 50%;
@@ -17,6 +22,9 @@ body {
     box-shadow: 0px 0px 10px gray;
 }
 
+/* ============================
+   GLOBAL INPUT + BUTTON STYLING
+   ============================ */
 input {
     padding: 10px;
     width: 60%;
@@ -36,8 +44,45 @@ button {
     cursor: pointer;
 }
 
+/* ============================
+   SHARED RESULT TEXT
+   ============================ */
 #result {
     margin-top: 20px;
     font-size: 22px;
     font-weight: bold;
+}
+
+/* ============================
+   VALIDATION PAGE STYLING
+   ============================ */
+#container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Only affect inputs inside the validation container */
+#container input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Validation page submit button */
+#submitBtn {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Validation page message area */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
 }
