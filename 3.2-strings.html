@@ -1,0 +1,39 @@
+<!-- Name: Robert Jimenez -->
+<!-- File: validation.html -->
+<!-- Purpose: User Input Validation Page for Final Project -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Input Validation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <a href="Final Project-Index.html">Back to Landing Page</a>
+
+    <div id="container">
+
+        <h2>User Validation Portal</h2>
+
+        <form id="userForm" onsubmit="return validateForm()">
+
+            <input type="text" id="firstName" placeholder="Enter First Name">
+            <input type="text" id="lastName" placeholder="Enter Last Name">
+            <input type="text" id="zip" placeholder="Enter 5-digit ZIP Code">
+
+            <input type="submit" id="submitBtn" value="Submit">
+
+        </form>
+
+        <div id="message"></div>
+
+    </div>
+
+    <script src="strings.js"></script>
+
+</body>
+</html>
